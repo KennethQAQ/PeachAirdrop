@@ -4,4 +4,15 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+    <!-- 类名 -->
+    <servlet-name>UploadServlet</servlet-name>
+    <!-- 所在的包 -->
+    <servlet-class>UploadServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UploadServlet</servlet-name>
+    <!-- 访问的网址 -->
+    <url-pattern>/UploadServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
