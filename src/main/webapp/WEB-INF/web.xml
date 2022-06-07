@@ -2,7 +2,7 @@
  "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
-<web-app>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
   <display-name>Archetype Created Web Application</display-name>
   <servlet>
     <!-- 类名 -->
@@ -14,5 +14,18 @@
     <servlet-name>UploadServlet</servlet-name>
     <!-- 访问的网址 -->
     <url-pattern>/UploadServlet</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet>
+    <!-- 类名 -->
+    <servlet-name>ClipboardServlet</servlet-name>
+    <!-- 所在的包 -->
+    <servlet-class>ClipboardServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ClipboardServlet</servlet-name>
+    <!-- 访问的网址 -->
+    <url-pattern>/ClipboardServlet</url-pattern>
   </servlet-mapping>
 </web-app>
