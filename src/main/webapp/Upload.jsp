@@ -14,6 +14,8 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>文件上传</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css"/>
 </head>
 
 <body>
@@ -24,7 +26,7 @@
     选择一个文件:
     <input type="file" name="uploadFile"/>
     <br/><br/>
-    <input type="submit" value="上传"/>
+    <input type="submit" value="上传" id="btn1"/>
 </form>
 
 </body>
