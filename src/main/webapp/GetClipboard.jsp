@@ -12,6 +12,8 @@
 <html>
 <head>
     <title>获取剪切板</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css"/>
 </head>
 <% Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
     String text;
@@ -31,10 +33,10 @@
     <textarea  id="bar" name="bar" rows=30 cols="50">
         <%=text%>
     </textarea>
-    <button class="btn" data-clipboard-action="copy" data-clipboard-target="#bar">
-        复制内容到剪切板
+    <button class="btn" data-clipboard-action="copy" data-clipboard-target="#bar" id="btn">
+        复制
     </button>
-    <input type="submit" value="黏贴内容到PC剪切板"/>
+    <input type="submit" value="黏贴" id="btn"/>
 </form>
 
 </body>
