@@ -14,6 +14,7 @@
     <title>获取剪切板</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.10/dist/clipboard.min.js"></script>
 </head>
 <% Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
     String text;
