@@ -9,3 +9,18 @@ function ReadText(text){
         })
         .catch(err => console.error('读取文本失败err: ', err))
 }
+function readClipText(){
+    var clipPromise = navigator.clipboard.readText();
+    clipPromise.then(function(clipText){
+        alert(clipText);
+    });
+
+}
+let content = document.getElementById('bar');
+
+function setBar() {
+    var clipPromise = navigator.clipboard.readText();
+    clipPromise.then(function(clipText){
+        content.value = clipText;
+    });
+}

@@ -15,31 +15,21 @@ public class ClipboardServlet extends HttpServlet {
                       HttpServletResponse response)
             throws ServletException, IOException {
         // Servlet 代码
+        request.setCharacterEncoding("utf-8");
+        String content = request.getParameter("bar");
+        System.out.println(content);
+        Clipboard sysClip = Toolkit.getDefaultToolkit().getSystemClipboard();
+        Transferable tText = new StringSelection(content);
+        sysClip.setContents(tText,null);
     }
     public void doPost(HttpServletRequest request,
                        HttpServletResponse response)
             throws ServletException, IOException {
         // Servlet 代码
-        Clipboard sysClip = Toolkit.getDefaultToolkit().getSystemClipboard();
-        Clipboard clipboard = new Clipboard("clip");
-        String[] strings = new String[2];
-        //int i = 0;
-        try {
-            strings[0] = (String) clipboard.getData(DataFlavor.stringFlavor);
-            System.out.println(strings[0]);
-            //i = (i + 1) % 2;
-            Transferable Text = new StringSelection(strings[0]);
-            sysClip.setContents(Text,null);
-            strings[1] = (String) sysClip.getData(DataFlavor.stringFlavor);
-            System.out.println(strings[1]);
-
-
-        } catch (UnsupportedFlavorException e) {
-            e.printStackTrace();
-        }
-
+        doGet(request,response);
 
 
     }
+
 
 }
