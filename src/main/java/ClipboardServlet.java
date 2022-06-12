@@ -27,7 +27,7 @@ public class ClipboardServlet extends HttpServlet {
             throws ServletException, IOException {
         // Servlet 代码
         doGet(request,response);
-
+        request.getRequestDispatcher("/GetClipboard.jsp").forward(request,response);
 
     }
 

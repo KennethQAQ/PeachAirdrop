@@ -18,12 +18,12 @@
 </head>
 <% Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
     String text;
-    try{
-        text = (String) clipboard.getData(DataFlavor.stringFlavor);
+    text = (String) clipboard.getData(DataFlavor.stringFlavor);
+    if(text==null){
+        text="在此处黏贴剪切板内容";
     }
-    catch (UnsupportedFlavorException e) {
-        text = "在此处黏贴剪切板内容";
-    }
+
+
 %>
 <body>
 <script type="text/javascript" src="ReadClip.js"></script>
@@ -31,7 +31,7 @@
     var clipboard = new ClipboardJS('.btn');
 </script>
 <form method="post" action="ClipboardServlet">
-    <textarea  id="bar" name="bar" rows=30 cols="50">
+    <textarea  id="bar" name="bar" rows=30 cols="45">
         <%=text%>
     </textarea>
     <button class="btn" data-clipboard-action="copy" data-clipboard-target="#bar" id="btn">
